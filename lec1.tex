@@ -1,0 +1,121 @@
+\documentclass[11pt]{article}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{xcolor}
+
+
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+
+    \title{Lecture 1: Norm and Hilbert Space}
+    \author{Liu Bo}
+    \date{June 25, 2020}
+
+\begin{document}
+\maketitle
+
+\section{Norm}
+\begin{definition}[Vector Space]
+A \textbf{vector space} $V$ over a field $k$ is a set of vectors which come with addition ($+: V\times V \to V$) and scalar multiplication $(\cdot: k\times V\to V)$ along with some classic axioms: commutativity, associativity, identity, and inverse of addition, identity of multiplication, and distributivity.
+\end{definition}
+
+\begin{definition}[Norm]
+Given a vector space $\textbf{X}$ over a subfield $F$ of the complex numbers $\mathbb{C}$, a norm is a real-values function $p$: $\textbf{X}$  $\to$ $\mathbb{R}$ with the following properties, where $|s|$ denotes the usual absolute value of a scalr s:
+\begin{enumerate}
+\item Positive Definite: $\| v\| \geq 0$ and $\| v\| = 0 \iff v = 0$.
+\item Homogeneity: $\| \lambda v\| = |\lambda| \| v\|$ for all $v\in V$ and $\lambda \in \mathbb{R}$.
+\item Triangle Inequality: $\| x+y\| \leq \| x\| + \| y\|$.
+\end{enumerate}
+
+\end{definition}
+
+\begin{example}{Absolute-value norm}
+
+$\| x\| = |x|$.
+\end{example}
+
+\begin{example}{Euclidean norm}
+
+$\| \textbf{x} \|_2 =\sqrt{\textbf{x} \cdot \textbf{x}}= \sqrt{x_1^2 + \cdots + x_n^2}$
+\end{example}
+
+\begin{example}{Finite-dimensional complex normed spaces}
+
+On an n-dimensional exomplex space $\mathbb{C}^n$, the most common is 
+$\| \textbf{z}\| = \sqrt{|z_1|^2 + \cdots + |z_n|^2} = \sqrt{z_1\overline{z_1} +\cdots + z_n\overline{z_n}}$
+
+In inner product form, this is $\left\Vert \textbf{x} \right\Vert = \sqrt{\textbf{x}^H\textbf{x}}$
+\end{example}
+
+\begin{example}{Manhattan norm}
+
+$\left\Vert \textbf{x} \right\Vert_1 = \sum_{i=1}^n \left\vert x_i\right\vert$.
+\end{example}
+
+\begin{example}{p-norm}
+
+Let $p\geq 1$ be a real number. The p-norm (also called $l_p$-norm) of a vector $\textbf{x}$ is 
+$\left\Vert \textbf{x} \right\Vert = (\sum_{i=1}^n |x_i|^p)^{1/p}$
+
+As p approaches $\infty$ the p-norm approaches the infinity norm:
+
+$\left\Vert \textbf{x} \right\Vert = \max_{i}|x_i|$
+\end{example}
+
+\begin{example}{Infinite dimensions}
+
+The generalization of the above norms to an infinite number of components leads to $l^p$ and $\textbf{L}^p$ spaces, with norms
+
+$\left\Vert \textbf{x} \right\Vert = (\sum_{i \in \mathbb{N}} |x_i|^p)^{1/p}$ and $\left\Vert f\right\Vert_{p, \textbf{X}} = (\int_{\textbf{X}}|f(x)|^p dx)^{1/p}$
+\end{example}
+
+\section{Hilbert Space}
+
+\begin{definition}{Inner product}
+
+Inner product is a map
+
+$\langle\cdot,\cdot\rangle: \textbf{V} \times \textbf{V} \to \textbf{F}$
+
+that satisfies the following three properties for all vectors $x, t, z \in \textbf{V}$ and all scalars $a, b \in \textbf{F}$.
+\begin{enumerate}
+\item Conjugate symmetry: $\langle x,y\rangle=\overline{\langle y,x\rangle}$
+\item Linearity in the first argument: $\langle ax+by,z\rangle=a\langle x,z\rangle+b\langle y,z\rangle$.
+\item Psotive definite: if x is not zero, then $\langle x,x\rangle > 0$ 
+\end{enumerate}
+
+\end{definition}
+
+\begin{definition}{Inner product vector space}
+
+An \textbf{inner product vector space} is a vector space \textbf{V} over the field \textbf{F} together with an inner product.
+\end{definition}
+
+\begin{definition}{Cauchy sequency}
+
+A sequence $x_1, x_2, x_3, \cdots$ in a metric space $(\textbf{X}, d)$ is called Cauchy if for every positive real number $r \geq 0$ there is a positive interger \textbf{N} such that for all positive integers $m, n\geq \textbf{N}$,
+
+$d(x_m, x_n)\leq r$.
+\end{definition}
+
+\begin{definition}{Complete space}
+
+A metric space $(\textbf{X}, d)$ is complete if every Cauchy sequence of points in \textbf{X} has a limit that is also in \textbf{X}.
+\end{definition}
+
+\begin{definition}{Hilbert Space}
+
+A \textit{Hilbert} space \textit{H} is a real or complex inner product space that is also a complete metrix space with respect to the distance function induced by the inner product.
+
+\end{definition}
+\color{red}
+good examples are needed here.
+\begin{example}{Lebesgue spaces}
+
+\end{example}
+
+\begin{example}{Examples}
+
+\end{example}
+
+\end{document}
